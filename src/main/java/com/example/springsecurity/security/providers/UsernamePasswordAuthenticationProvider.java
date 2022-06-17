@@ -27,6 +27,7 @@ public class UsernamePasswordAuthenticationProvider implements AuthenticationPro
         if(passwordEncoder.matches(password, user.getPassword())){
             return new UsernamePasswordAuthentication(username, password, user.getAuthorities());
         }
+        //Test
         throw new BadCredentialsException(":(");
     }
 
